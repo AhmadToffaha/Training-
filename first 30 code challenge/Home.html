@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> welcome to our first website</h1>
+    <script>
+        // -------------------- (1&2)  --------------------
+      console.log("hello javascript world");// the codew will print hello javascript world in the console
+      /* this is a multi line comment
+      i can write more than one line of comments here
+      */
+      // -------------------- (3)  --------------------
+      console.log("Ahmad Toffaha "+25+" Palestine ");
+            // -------------------- (4)  --------------------
+       console.log("5" + 5);//will print 55
+             // -------------------- (5)  --------------------
+
+       console.log(10 + 20 + "30");//will print 3030
+             // -------------------- (6)  --------------------
+
+       var x=5;
+       var x=10;
+         console.log(x);//will print 10
+               // -------------------- (7)  --------------------
+
+    //   let z=5;
+     //  let z=10;
+       //     console.log(z);
+                  // -------------------- (8)  --------------------
+
+       const pi=3.14;
+     //  pi=14;//will give error because pi is constant
+         console.log(pi);
+
+      // -------------------- (9)  --------------------
+
+         // Global scope
+var x = 10;
+let y = 20;
+
+console.log("Global x:", x); // 10
+console.log("Global y:", y); // 20
+
+{
+    // Block scope
+    var x = 99;    // var: REDECLARES the global x
+    let y = 55;    // let: NEW variable only inside this block
+
+    console.log("Inside block x:", x); // 99
+    console.log("Inside block y:", y); // 55
+}
+
+console.log("After block x:", x); // 99  -> var escaped the block
+console.log("After block y:", y); // 20  -> let stayed loyal to global y
+// -------------------- (11) Declare variables --------------------
+let age = 25;            // number
+let city = "Ramallah";   // string
+let isStudent = true;    // boolean
+let score;               // undefined
+let data = null;         // null
+
+
+// -------------------- (12) typeof for each variable --------------------
+console.log(typeof age);       // number
+console.log(typeof city);      // string
+console.log(typeof isStudent); // boolean
+console.log(typeof score);     // undefined
+console.log(typeof data);      // object
+
+
+// -------------------- (13) typeof null --------------------
+console.log(typeof null);   // "object" (JS historical bug)
+
+
+// -------------------- (14) colors array --------------------
+let colors = ["red", "green", "blue"];
+console.log(colors[1]);   // green
+
+
+// -------------------- (15) person object --------------------
+let person = {
+    name: "Hamouda",
+    age: 22,
+    job: "Developer"
+};
+
+console.log(person);       // whole object
+console.log(person.job);   // Developer
+// -------------------- (16) Calculate expression --------------------
+let result = (15 + 3) * 2 - 8 / 4;
+console.log(result); // 34
+
+
+// -------------------- (17) Check even or odd using % --------------------
+let numb= 7;
+
+if (numb % 2 === 0) {
+    console.log(numb + " is even");
+} else {
+    console.log(numb + " is odd");
+}
+
+// -------------------- (18) Sum, difference, product --------------------
+let a = 10;
+let b = 4;
+
+console.log("Sum:", a + b);
+console.log("Difference:", a - b);
+console.log("Product:", a * b);
+
+
+// -------------------- (19) Predict output --------------------
+console.log(5 + 10 * 2); // 25
+
+
+// -------------------- (20) Increment variable in 3 ways --------------------
+let inc = 5;
+
+inc = inc + 1;   // Method 1
+console.log(inc);
+
+inc++;         // Method 2
+console.log(inc);
+
+inc += 1;      // Method 3
+console.log(inc);
+// -------------------- (21) Using +=, -=, *=, /=, %= --------------------
+let num = 10;
+
+num += 5;   // 10 + 5  = 15
+num -= 3;   // 15 - 3  = 12
+num *= 2;   // 12 * 2  = 24
+num /= 4;   // 24 / 4  = 6
+num %= 5;   // 6 % 5   = 1
+
+console.log(num); // 1
+
+
+// -------------------- (22) Final value of x --------------------
+let val = 5;
+val += 10;   // 15
+val -= 3;    // 12
+val *= 2;    // 24
+
+console.log(val); // 24
+
+
+// -------------------- (23) Concatenate two strings using += --------------------
+let msg = "Hello";
+msg += " World!";
+
+console.log(msg); // Hello World!
+
+
+// -------------------- (24) Use **= operator to square a number --------------------
+let number= 6;
+number **= 2;   // same as number = number ** 2
+
+console.log(number); // 36
+// -------------------- (25) Difference between == and === --------------------
+// ==  : compares values only (does type conversion)
+// === : compares value AND type (strict)
+
+console.log(5 == "5");   // true  -> values equal after conversion
+console.log(5 === "5");  // false -> types different (number vs string)
+
+
+// -------------------- (26) Predict the output --------------------
+console.log(5 == "5");   // true
+console.log(5 === "5");  // false
+
+
+// -------------------- (27) Check if number is > 10 AND < 50 --------------------
+let n = 30;
+
+if (n > 10 && n < 50) {
+    console.log("Number is between 10 and 50");
+} else {
+    console.log("Number is NOT in range");
+}
+
+
+// -------------------- (28) Results of != and !== --------------------
+console.log(10 != "10");    // false  -> values equal after conversion
+console.log(10 !== "10");   // true   -> types different (number vs string)
+
+
+// -------------------- (29) Check if age is between 18 and 60 inclusive --------------------
+let ageCheck = 45;
+
+if (ageCheck >= 18 && ageCheck <= 60) {
+    console.log("Age is within the allowed range");
+} else {
+    console.log("Age is outside the allowed range");
+}
+
+
+// -------------------- (30) Combine two strings using + and template literals --------------------
+let txt1 = "JavaScript";
+let txt2 = "is fun";
+
+let combinedPlus = txt1 + " " + txt2;
+console.log(combinedPlus);      // JavaScript is fun
+
+let combinedTemplate = `${txt1} ${txt2}`;
+console.log(combinedTemplate);  // JavaScript is fun
+
+
+    </script>
+</body>
+</html>

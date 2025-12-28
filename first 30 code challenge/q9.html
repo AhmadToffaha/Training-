@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+// (9)
+var x = 10;
+let y = 20;
+
+console.log("Global x:", x);
+console.log("Global y:", y);
+
+{
+    var x = 99;
+    let y = 55;
+    console.log("Inside block x:", x);
+    console.log("Inside block y:", y);
+}
+
+console.log("After block x:", x);
+console.log("After block y:", y);
+</script>
+</body>
+</html>
